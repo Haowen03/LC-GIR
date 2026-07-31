@@ -1,0 +1,44 @@
+name: Add or update a paper
+description: Suggest an LC-GIR paper, code release, or correction.
+title: "[Paper] "
+labels:
+  - paper
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping keep the LC-GIR literature list complete and accurate.
+  - type: input
+    id: method
+    attributes:
+      label: Method or paper name
+      placeholder: e.g., GeoVG
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Official paper URL
+      placeholder: Publisher, CVF/PMLR, or arXiv URL
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Official code URL
+      placeholder: Author-maintained repository, if available
+  - type: dropdown
+    id: category
+    attributes:
+      label: Suggested category
+      options:
+        - Discriminative Cross Modal Reasoning
+        - Foundation Model Guided Reasoning
+        - Generative Multimodal Reasoning
+        - Transferable Foundation
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Venue, dataset, and notes
+      description: Include the year, venue, datasets, checkpoints, or protocol details that help verify the entry.
